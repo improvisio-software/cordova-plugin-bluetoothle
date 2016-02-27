@@ -15,10 +15,15 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="BluetoothLePlugin">
-        <param name="android-package" value="com.randdusing.bluetoothle.BluetoothLePlugin" />
+        <param name="android-package" value="com.megster.cordova.BluetoothSerial"/>
       </feature>
     </config-file>
-    <source-file src="src/android/BluetoothLePlugin.java" target-dir="src/com/randdusing/bluetoothle" />
+
+    <source-file src="src/android/com/megster/cordova/BluetoothSerial.java"
+        target-dir="src/com/megster/cordova"/>
+    <source-file src="src/android/com/megster/cordova/BluetoothSerialService.java"
+        target-dir="src/com/megster/cordova"/>
+
     <config-file target="AndroidManifest.xml" parent="/manifest">
       <uses-permission android:name="android.permission.BLUETOOTH"/>
       <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
