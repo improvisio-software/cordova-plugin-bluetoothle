@@ -1,5 +1,9 @@
 var bluetoothleName = "BluetoothLePlugin";
 var bluetoothle = {
+  // list bound devices
+  list: function (success, failure) {
+    cordova.exec(success, failure, bluetoothleName, "list", []);
+  },
   initialize: function(successCallback, params) {
     cordova.exec(successCallback, successCallback, bluetoothleName, "initialize", [params]);
   },
